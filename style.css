@@ -1,0 +1,35 @@
+$size : 30rem;
+
+html, body {
+  position: relative;
+  height: 100%;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;  
+}
+div {
+  width: 500px;
+  height: 500px;
+  background-image: url('1.jpg');
+  background-color: black;
+  background-blend-mode: multiply;
+  background-size: contain;
+  background-position: center center;
+  -webkit-animation:
+    spin 180s linear infinite,
+    color 10s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(1turn); }  
+}
+
+@keyframes color {
+  20% { background-color: dodgerblue; }  
+  40% { background-color: lime; }  
+  60% { background-color: tomato; }  
+  80% { background-color: yellow; }  
+}
